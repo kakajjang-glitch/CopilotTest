@@ -21,3 +21,7 @@ if st.button("확인"):
         st.write("더 작은 숫자입니다.")
     else:
         st.write(f"축하합니다! {st.session_state.count}번 만에 맞추셨습니다.")
+        if st.button("게임 다시 시작"):
+            st.session_state.answer = random.randint(1, 100)
+            st.session_state.count = 0
+            st.rerun()
